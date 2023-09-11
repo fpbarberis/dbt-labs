@@ -4,27 +4,15 @@
     )
 }}
 
+-- call the modular models i created
 with customers as (
 
-    select
-        id as customer_id,
-        first_name,
-        last_name
-
-    from encoded-hangout-398420.jaffle_shop.customers
-
+    select * from {{ ref('stg_customers') }}
 ),
 
 orders as (
 
-    select
-        id as order_id,
-        user_id as customer_id,
-        order_date,
-        status
-
-    from encoded-hangout-398420.jaffle_shop.orders
-
+    select * from {{ ref('stg_orders') }}
 ),
 
 customer_orders as (

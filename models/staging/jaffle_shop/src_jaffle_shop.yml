@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: encoded-hangout-398420
+    tables:
+      - name: customers
+      - name: orders

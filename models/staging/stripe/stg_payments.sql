@@ -8,4 +8,4 @@ select
     amount / 100 as amount,
     created as created_at
 
-from encoded-hangout-398420.stripe.payment
+from {{ source('stripe', 'payment') }} 

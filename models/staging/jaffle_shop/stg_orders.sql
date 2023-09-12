@@ -6,7 +6,7 @@ with orders as (
         order_date,
         status
 
-    from encoded-hangout-398420.jaffle_shop.orders
+    from {{ source('jaffle_shop', 'orders') }} 
 
 )
 
